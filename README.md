@@ -18,56 +18,60 @@ Thing.isArray("Smith") /// False
 
 **Thing.allTrue**
 
-Thing.allTrue([undefined,true]) /// False
-Thing.allTrue([true,true,true]) /// True
+<code>Thing.allTrue([undefined,true])</code> /// False
+<code>Thing.allTrue([true,true,true])</code> /// True
 
 **Thing.contains**
 
-Thing.contains([2,4,5],2) /// True
-Thing.contains([2,4,5],3) /// False
+<code>Thing.contains([2,4,5],2)</code> /// True
+<code>Thing.contains([2,4,5],3)</code> /// False
 
 **.loop (CHAINABLE)**
 
-Thing({name:"Smith",age:20}).loop(function(key,val){
+<code>Thing({name:"Smith",age:20}).loop(function(key,val){
 console.log(key,val);
-});
+});</code>
 
 **.keys**
 
-Thing({name:"Smith",age:20}).keys() /// ["name","age"]
+<code>Thing({name:"Smith",age:20}).keys()</code> /// ["name","age"]
 
 **.values**
 
-Thing({name:"Smith",age:20}).values() /// ["Smith",20]
+<code>Thing({name:"Smith",age:20}).values()</code> /// ["Smith",20]
 
 **.get**
 
-Thing({name:"Smith",age:20}).get("name") /// ["Smith"]
+<code>Thing({name:"Smith",age:20}).get("name")</code> /// ["Smith"]
 
-Thing({name:"Smith",age:20}).get(["name","age"]) /// ["Smith",20]
+<code>Thing({name:"Smith",age:20}).get(["name","age"])</code> /// ["Smith",20]
 
 **.set (CHAINABLE)**
 
-Thing({name:"Smith",age:20}).set({age:30,gender:"male"}) /// {name:"Smith","age":30,gender:"male"}
+<code>Thing({name:"Smith",age:20}).set({age:30,gender:"male"})</code> /// {name:"Smith","age":30,gender:"male"}
 
 **.add (CHAINABLE)**
 
-Thing({name:"Smith",age:20}).add("gender","male") /// {name:"Smith","age":20,gender:"male"}
+<code>Thing({name:"Smith",age:20}).add("gender","male")</code> /// {name:"Smith","age":20,gender:"male"}
 
 **.containsKey**
 
-Thing({name:"Smith",age:20}).containsKey("name") /// true
+<code>Thing({name:"Smith",age:20}).containsKey("name")</code> /// true
 
-Thing({name:"Smith",age:20}).containsKey("gender") /// false
+<code>Thing({name:"Smith",age:20}).containsKey("gender")</code> /// false
 
 **.clone (CHAINABLE)**
 
+<code>
+<pre>
 var th = Thing({name:"Smith",age:20});
 
 th.add("gender","male") /// th is {name:"Smith","age":20,gender:"male"}
 
 th.clone().set({"name","Jack"}) /// th is still {name:"Smith","age":20,gender:"male"}
+</pre>
+</code>
 
 **NOTE: Thing is a wrapper object. To convert thing object to js object use the below method.**
 
-Thing({name:"Smith",age:20}).toObject() /// JS object --> {name:"Smith",age:20}
+<code>Thing({name:"Smith",age:20}).toObject() /// JS object --> {name:"Smith",age:20}</code>
