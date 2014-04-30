@@ -61,15 +61,15 @@ console.log(key,val);
 <code>Thing({name:"Smith",age:20}).containsKey("gender")</code> /// false
 
 **.clone (CHAINABLE)**
-<code>
 <pre>
+<code>
 var th = Thing({name:"Smith",age:20});
 
 th.add("gender","male") /// th is {name:"Smith","age":20,gender:"male"}
 
 th.clone().set({"name","Jack"}) /// th is still {name:"Smith","age":20,gender:"male"}
-</pre>
 </code>
+</pre>
 
 **NOTE: Thing is a wrapper object. To convert thing object to js object use the below method.**
 
