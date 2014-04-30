@@ -13,7 +13,7 @@ Here are some basic examples,
 
 **Thing.isArray**
 
-<code>Thing.isArray([2,4,5])</code> */// True*
+<code>Thing.isArray([2,4,5])</code> */// True*  
 <code>Thing.isArray("Smith")</code> */// False*
 
 **Thing.allTrue**
