@@ -18,12 +18,12 @@ Here are some basic examples,
 
 **Thing.allTrue**
 
-<code>Thing.allTrue([undefined,true])</code> */// False*
+<code>Thing.allTrue([undefined,true])</code> */// False*  
 <code>Thing.allTrue([true,true,true])</code> */// True*
 
 **Thing.contains**
 
-<code>Thing.contains([2,4,5],2)</code> */// True*
+<code>Thing.contains([2,4,5],2)</code> */// True*  
 <code>Thing.contains([2,4,5],3)</code> */// False*
 
 **.loop (CHAINABLE)**
