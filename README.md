@@ -61,7 +61,6 @@ console.log(key,val);
 <code>Thing({name:"Smith",age:20}).containsKey("gender")</code> /// false
 
 **.clone (CHAINABLE)**
-
 <code>
 <pre>
 var th = Thing({name:"Smith",age:20});
