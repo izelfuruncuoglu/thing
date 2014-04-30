@@ -3,7 +3,7 @@ thing
 
 Extreme lightweight object plugin without dependencies.
 
-=====
+-----
 
 At each plugin, there are object helper methods that are frequently used. The aim of this plugin is to decrease the time required for code rewriting while starting to a new plugin by providing some basic object utilities.
 
