@@ -54,7 +54,7 @@ Thing({name:"Smith",age:20}).set({age:30,gender:"male"}) /// {name:"Smith","age"
 
 Thing({name:"Smith",age:20}).add("gender","male") /// {name:"Smith","age":20,gender:"male"}
 
-**.containsKey **
+**.containsKey**
 
 Thing({name:"Smith",age:20}).containsKey("name") /// true
 
