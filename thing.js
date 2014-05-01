@@ -2,15 +2,14 @@
 
 
     var Thing = function (o) {
-            return new t(o);
-        },
-        t = function (o) {
-            this.toObject = function () {
-                return o;
-            }
-        },
-        i = new Function(),
-        ins = new i();
+        return new t(o);
+    };
+
+    var t = function (o) {
+        this.toObject = function () { return o; }
+    },
+    i = new Function(),
+    ins = new i();
 
     i.prototype.contains = function (arr, elem) {
         var i = arr.length;
