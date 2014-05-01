@@ -11,16 +11,6 @@ This plugin does not intend to be used by directly in the projects. For these ca
 
 Here are some basic examples,
 
-**Thing.isArray**
-
-<code>Thing.isArray([2,4,5])</code> */// True*  
-<code>Thing.isArray("Smith")</code> */// False*
-
-**Thing.allTrue**
-
-<code>Thing.allTrue([undefined,true])</code> */// False*  
-<code>Thing.allTrue([true,true,true])</code> */// True*
-
 **Thing.contains**
 
 <code>Thing.contains([2,4,5],2)</code> */// True*  
