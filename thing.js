@@ -6,41 +6,27 @@
     };
 
     var t = function (o) {
-            this.toObject = function () {
-                return o;
-            }
-        },
-        i = new Function(),
-        ins = new i();
-
-    i.prototype.isArray = function (o) {
-        return toString.call(o) === "[object Array]";
-    };
-
-    i.prototype.allTrue = function (arr) {
-        for (var i in arr)
-            if (!arr[i]) return false;
-        return true;
-    };
+        this.toObject = function () { return o; }
+    }
+   , i = new Function(),
+   ins = new i();
 
     i.prototype.contains = function (arr, elem) {
+        var i = arr.length;
 
-        for (var i in arr) {
-            if (arr[i] === elem) return true;
-        }
+        while (i--)
+            if (arr[i] === elem)
+                return true;
+        
         return false;
 
     };
-
-    i.prototype.hasOwn = function (o, key) {
-        return o.hasOwnProperty(key);
-    }
 
     t.prototype.loop = function (fn) {
         var obj = this.toObject();
 
         for (var key in obj) {
-            if (ins.hasOwn(obj, key))
+            if (obj.hasOwnProperty(key))
                 fn.call(obj, key, obj[key]);
         }
         return this;
@@ -64,22 +50,25 @@
 
     t.prototype.get = function (keys) {
 
-        if (!ins.isArray(keys)) keys = new Array(keys);
+        keys = new Array(keys);
 
         var arr = [];
 
         this.loop(function (k, v) {
-            if (ins.contains(keys, k)) arr.push(v);
+            if (ins.contains(keys, k))
+                arr.push(v);
         });
 
         return arr;
     };
 
     t.prototype.set = function (o) {
+        var obj = this.toObject();
 
-        for (var key in o) {
-            this.toObject()[key] = o[key];
-        }
+        Thing(o).loop(function (k, v) {
+            obj[k] = v;
+        });
+
         return this;
 
     };
@@ -101,11 +90,10 @@
         return Thing(o);
     };
 
-
     window.Thing = (function (thing) {
 
         thing(ins.__proto__).loop(function (k, v) {
-            th[k] = v;
+            thing[k] = v;
         });
 
         return thing;
