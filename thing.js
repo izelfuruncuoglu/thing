@@ -1,9 +1,8 @@
 (function (window, document, undefined) {
 
-
     var Thing = function (o) {
-        return new t(o);
-    },
+            return new t(o);
+        },
         t = function (o) {
             this.toObject = function () {
                 return o;
@@ -13,8 +12,7 @@
             var i = arr.length;
 
             while (i--)
-                if (arr[i] === elem)
-                    return true;
+            if (arr[i] === elem) return true;
 
             return false;
 
@@ -26,8 +24,7 @@
             var obj = this.toObject();
 
             for (var key in obj) {
-                if (obj.hasOwnProperty(key))
-                    fn.call(obj, key, obj[key]);
+                if (obj.hasOwnProperty(key)) fn.call(obj, key, obj[key]);
             }
             return this;
         },
@@ -52,8 +49,7 @@
             var arr = [];
 
             this.loop(function (k, v) {
-                if (contains(keys, k))
-                    arr.push(v);
+                if (contains(keys, k)) arr.push(v);
             });
 
             return arr;
