@@ -1,7 +1,7 @@
 thing
 =====
 
-Extreme lightweight object plugin without dependencies.
+Extreme lightweight object plugin without dependencies. ( 0.8 KB minified )
 
 -----
 
