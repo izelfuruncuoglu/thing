@@ -24,7 +24,9 @@
             var obj = this.toObject();
 
             for (var key in obj) {
-                if (obj.hasOwnProperty(key)) fn.call(obj, key, obj[key]);
+                 if (obj.hasOwnProperty(key))
+                    if(fn.call(obj, key, obj[key]) === false)
+                    break;
             }
             return this;
         },
